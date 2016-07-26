@@ -1,0 +1,65 @@
+actori
+======
+
+
+user
+-----
+- id
+- lastUpdated
+- TODO:isDeleted
+
+
+
+plante
+--------
+    - id
+    - lastUpdated
+    - TODO:isDeleted
+- latitudine
+- longitudine
+- tip_id
+- user_id
+- nr_raportari_gresit
+- nr_raportari_inadecvat
+
+dictionar_tipuri_plante
+-----------------------
+- id
+- nume_tip
+
+poze
+----
+    - id
+    - lastUpdated
+    - TODO:isDeleted
+- url
+- titlu
+- planta_id
+- user_id
+- nr_voturi
+- nr_raportari_gresit
+- nr_raportari_inadecvat
+
+amintiri
+--------
+- text
+- planta_id
+- user_id
+- nr_voturi
+- nr_raportari_gresit
+- nr_raportari_inadecvat
+- lastUpdated
+- TODO:isDeleted
+
+
+specii
+------
+- nume_specie
+- link
+- planta_id
+- user_id
+- nr_voturi
+- nr_raportari_gresit
+- nr_raportari_inadecvat
+- lastUpdated
+- TODO:isDeleted

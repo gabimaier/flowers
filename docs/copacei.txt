@@ -1,0 +1,84 @@
+copacel
+
+plante - coordonate
+	- tip planta: copac inflorit, flori
+
+postari useri:
+	- poza
+	- coordonate
+	- voturi
+
+useri: vieweri fara cont??, useri cu cont
+
+
+vezi harta cu iconite copacei
+vezi pozele de la un copacel in ordinea popularitatii
+fa ruta catre un copac
+fa circuit top x copaci
+
+adauga planta
+voteaza planta
+raporteaza greseala
+
+adauga poza planta
+voteaza poza
+raporteaza greseala
+
+adauga specie planta
+voteaza specie
+raporteaza greseala
+
+adauga comentariu amintire planta
+voteaza comentariu
+raporteaza
+
+puncte castigate de user pt voturi primite / date si raportari
+
+cauta copaci dupa specie
+
+notificari noutati:
+	copacei nou adaugati
+	poze/comentarii noi
+	voturi primite
+
+legare la fb: pune actualizari, postari, etc
+
+numai userul care a adaugat ceva poate edita postarea
+
+cum identific un copac: pot fi diferite coordonatele - imi trebuie o precizie configurabila
+limiteaza numarul de poze per copac
+limiteaza numarul de poze per user per copac	- potential de capitalizat
+limiteaza numarul de comentarii per copac
+limiteaza numarul de voturi per user per poza/comentariu
+puncte castigate prin voturi date / primite -> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+faza 1
+======
+client: browser
+adauga locatie copac din text box
+afiseaza toti copacii in lista
+sterge copac din lista
+
+server: rest + mysql on localhost
+
+
+
+
+
+
+
+
+
