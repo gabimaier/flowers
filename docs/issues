@@ -23,3 +23,9 @@ JPA - mapping:
 
 - how to store default change timestamp?
     http://docs.jboss.org/hibernate/stable/entitymanager/reference/en/html/listeners.html
+
+- how to embed fields in another class
+    new @Embeddable class
+    @Embedded field
+
+- how to enable logical delete

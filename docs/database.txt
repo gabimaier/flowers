@@ -15,17 +15,17 @@ plante
     - id
     - lastUpdated
     - TODO:isDeleted
-- latitudine
-- longitudine
-- tip_id
-- user_id
-- nr_raportari_gresit
-- nr_raportari_inadecvat
+- latitude
+- longitude
+- categoryId
+- userId
+    - numberOfVotes
+    - numberOfMistakeReports
+    - numberOfInappropriateReports
 
-dictionar_tipuri_plante
+enum PlantCategory
 -----------------------
-- id
-- nume_tip
+TREE, FLOWER, FLOWERING_TREE
 
 poze
 ----
@@ -34,11 +34,11 @@ poze
     - TODO:isDeleted
 - url
 - titlu
-- planta_id
-- user_id
-- nr_voturi
-- nr_raportari_gresit
-- nr_raportari_inadecvat
+- plantId
+- userId
+    - numberOfVotes
+    - numberOfMistakeReports
+    - numberOfMistakeReports
 
 amintiri
 --------

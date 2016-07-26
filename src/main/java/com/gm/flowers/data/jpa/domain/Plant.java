@@ -4,13 +4,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Getter
 @Setter
 public class Plant extends BaseEntity {
-    private Double latitude;
-    private Double longitude;
+    @Embedded
+    private Location gps;
 
     @Enumerated(EnumType.STRING)
     private PlantCategory category;
@@ -19,6 +20,15 @@ public class Plant extends BaseEntity {
     @JoinColumn(name = "userId")
     private User user;
 
-    private Integer numberOfMistakeReports;
-    private Integer numberOfInappropriateReports;
+    @Embedded
+    private Feedback feedback;
+
+    @OneToMany(mappedBy = "plant")
+    private Set<Photo> photos;
+
+    @OneToMany(mappedBy = "plant")
+    private Set<Memory> memories;
+
+    @OneToMany(mappedBy = "plant")
+    private Set<Species> species;
 }

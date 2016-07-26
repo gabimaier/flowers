@@ -32,9 +32,7 @@ public class BaseEntityTest {
             User user = new User();
             user.setUsername(TEST_USERNAME);
             preInsertTime = LocalDateTime.now();
-            Thread.sleep(1);
             userRepository.save(user);
-            Thread.sleep(1);
             postInsertTime = LocalDateTime.now();
         }
     }
@@ -62,8 +60,8 @@ public class BaseEntityTest {
         //then
         LocalDateTime lastUpdated = foundUser.getLastUpdated();
         assertThat(lastUpdated, notNullValue());
-        assertThat(String.format("%s should be after %s", lastUpdated, preInsertTime), lastUpdated.isAfter(preInsertTime), is(true));
-        assertThat(String.format("%s should be before %s", lastUpdated, preInsertTime), lastUpdated.isBefore(postInsertTime), is(true));
+        assertThat(String.format("lastUpdated=%s preInsertTime=%s", lastUpdated, preInsertTime), !lastUpdated.isBefore(preInsertTime), is(true));
+        assertThat(String.format("lastUpdated=%s postInsertTime=%s", lastUpdated, postInsertTime), !lastUpdated.isAfter(postInsertTime), is(true));
 
     }
 
@@ -75,16 +73,17 @@ public class BaseEntityTest {
         userRepository.save(user);
         user.setUsername(TEST_USERNAME);
         final LocalDateTime preUpdateTime = LocalDateTime.now();
-        Thread.sleep(1);
         //when
         userRepository.save(user);
-        Thread.sleep(1);
         final LocalDateTime postUpdateTime = LocalDateTime.now();
         User foundUser =  userRepository.findOne(user.getId());
         //then
-        assertThat(foundUser.getLastUpdated(), notNullValue());
-        assertThat(foundUser.getLastUpdated().isAfter(preUpdateTime), is(true));
-        assertThat(foundUser.getLastUpdated().isBefore(postUpdateTime), is(true));
+        final LocalDateTime lastUpdated = foundUser.getLastUpdated();
+        assertThat(lastUpdated, notNullValue());
+        assertThat(String.format("lastUpdated=%s preUpdateTime=%s", lastUpdated, preUpdateTime),
+                lastUpdated.isAfter(preUpdateTime), is(true));
+        assertThat(String.format("lastUpdated=%s postUpdateTime=%s", lastUpdated, postUpdateTime),
+                lastUpdated.isBefore(postUpdateTime), is(true));
     }
 
 }
