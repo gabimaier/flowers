@@ -8,7 +8,7 @@ import javax.persistence.Embeddable;
 @Embeddable
 @Getter
 @Setter
-public class Feedback {
+public class Feedback{
     private Integer numberOfVotes;
     private Integer numberOfMistakeReports;
     private Integer numberOfInappropriateReports;

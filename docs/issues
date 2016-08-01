@@ -29,3 +29,4 @@ JPA - mapping:
     @Embedded field
 
 - how to enable logical delete
+    http://featurenotbug.com/2009/07/soft-deletes-using-hibernate-annotations/

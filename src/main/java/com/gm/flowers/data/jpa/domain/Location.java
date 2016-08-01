@@ -8,7 +8,7 @@ import javax.persistence.Embeddable;
 @Embeddable
 @Getter
 @Setter
-public class Location {
+public class Location{
     private Double latitude;
     private Double longitude;
 }

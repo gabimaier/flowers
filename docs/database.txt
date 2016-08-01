@@ -10,7 +10,7 @@ user
 
 
 
-plante
+plant
 --------
     - id
     - lastUpdated
@@ -27,7 +27,7 @@ enum PlantCategory
 -----------------------
 TREE, FLOWER, FLOWERING_TREE
 
-poze
+photo
 ----
     - id
     - lastUpdated
@@ -40,7 +40,7 @@ poze
     - numberOfMistakeReports
     - numberOfMistakeReports
 
-amintiri
+memory
 --------
 - text
 - planta_id
@@ -52,7 +52,7 @@ amintiri
 - TODO:isDeleted
 
 
-specii
+species
 ------
 - nume_specie
 - link
